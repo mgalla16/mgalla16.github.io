@@ -1,0 +1,48 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+#navbar {
+	width: 100%;
+	background-color: #f4f4f4;
+	margin-bottom: 5px;
+	ul {
+		list-style-type: none;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		display: inline-flex;
+		li {
+			padding: 5px;
+			width: 33%;
+			text-align: center;
+			color: black;
+		}
+		li:hover {
+				background-color: #e5e5e5;
+			}
+	}
+}
+
+.cats {
+	list-style-type: none;
+	padding: 0;
+	li {
+		display: inline-flex;
+		padding: 0px 2px 0px;
+		margin: 0px 2px 0px;
+		background-color: #f4f4f4;
+		border-radius: 5px;
+	}
+	li:hover {
+		text-decoration: underline;
+	}
+	a {
+		color: #727272;
+	}
+	a:hover {
+		text-decoration: underline;
+		font-weight: normal;
+	}
+}
