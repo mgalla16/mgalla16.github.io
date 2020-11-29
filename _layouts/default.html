@@ -38,6 +38,10 @@
         </div>
       {% for post in site.posts limit:3 %}
         <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+        {% if post.header_image %}
+          <img src={{post.header_image}} style="margin-bottom: 0px;" />
+          <p class="caption">{{post.header_caption}}</p>
+        {% endif %}
         {% if post.categories.size > 0 %}
           <p style="float: left;">Tags: </p>
           <ul class="cats">
