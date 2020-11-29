@@ -8,6 +8,7 @@
 {% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/assets/css/post.css' | relative_url }}" />
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -18,7 +19,7 @@
         <h1>{{site.title}}</h1>
         
         {% if site.logo %}
-          <img src="{{site.logo | relative_url}}" alt="Logo" />
+          <img src="{{site.logo | relative_url}}" alt="Logo" style="margin-bottom: 0px;" />
         {% endif %}
 
         <p>{{ site.description | default: site.github.project_tagline }}</p>
@@ -28,15 +29,27 @@
         {% endif %}
       </header>
       <section>
-        <div id="navbar">
-          <ul>
-            <li>Test</li>
-            <li>Another</li>
-            <li>Section</li>
-          </ul>
-        </div>
-
+      <div id="navbar">
+        <ul>
+          <li><a href="https://mgalla16.github.io">Home</a></li>
+          <li>Another</li>
+          <li>Section</li>
+        </ul>
+      </div>
       <h1>{{page.title}}</h1>
+      <p class="byline">By: {{ page.author }}</p>
+      {% if page.header_image %}
+        <img src={{page.header_image}} alt="RIP_DeLaurier" title="RIP DeLaurier" style="margin-bottom: 0px;" />
+        <p class="caption">{{page.header_caption}}</p>
+      {% endif %}
+      {% if page.categories.size > 0 %}
+        <p style="float: left;">Tags: </p>
+        <ul class="cats">
+        {% for cat in page.categories %}
+          <li class="badge"><a href="google.com">{{cat}}</a></li>
+        {% endfor %}
+        </ul>
+      {% endif %}
       {{content}}
       {% if page.categories.size > 0 %}
       	<p style="float: left;">Tags: </p>
@@ -46,13 +59,9 @@
       	{% endfor %}
       	</ul>
       {% endif %}
-
       </section>
       <footer>
-        {% if site.github.is_project_page %}
-        <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-        {% endif %}
-        <p><small>Don't forget to like, comment, and subscribe. Donate to my Patreon so I can keep making content for ya'll. Follow my Instagram, Twitter, Facebook, MySpace, OnlyFans</small></p>
+        <p><small>Don't forget to like, comment, and subscribe. Donate to my Patreon so I can keep making content for ya'll. Follow my Instagram, Twitter, Facebook, MySpace, OnlyFans, etc.</small></p>
       </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
