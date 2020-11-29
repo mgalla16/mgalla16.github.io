@@ -40,7 +40,7 @@
         <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
         {% if post.header_image %}
           <img src={{post.header_image}} style="margin-bottom: 0px;" />
-          <p class="caption">{{post.header_caption}}</p>
+          <p class="caption" style="font-style: italic; font-size: small; border-bottom-style: solid; border-width: thin; padding: 0px 0px 5px 5px; border-bottom-color: #bbbbbb;">{{post.header_caption}}</p>
         {% endif %}
         {% if post.categories.size > 0 %}
           <p style="float: left;">Tags: </p>
