@@ -22,11 +22,8 @@
           <img src="{{site.logo | relative_url}}" alt="Logo" style="margin-bottom: 0px;" />
         {% endif %}
 
+        <a href="https://github.com/mgalla16-sn4g">Github</a> | <a href="https://www.linkedin.com/in/matthew-r-gallagher-78bbb4148/"> Linkedin</a>
         <p>{{ site.description | default: site.github.project_tagline }}</p>
-
-        {% if site.github.is_project_page %}
-        <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
-        {% endif %}
       </header>
       <section>
       <div id="navbar">
@@ -37,7 +34,7 @@
         </ul>
       </div>
       <h1>{{page.title}}</h1>
-      <p class="byline">By: {{ page.author }}</p>
+      <p class="byline">{{ page.author }}</p>
       {% if page.header_image %}
         <img src={{page.header_image}} alt="RIP_DeLaurier" title="RIP DeLaurier" style="margin-bottom: 0px;" />
         <p class="caption">{{page.header_caption}}</p>
@@ -61,7 +58,7 @@
       {% endif %}
       </section>
       <footer>
-        <p><small>Don't forget to like, comment, and subscribe. Donate to my Patreon so I can keep making content for ya'll. Follow my Instagram, Twitter, Facebook, MySpace, OnlyFans, etc.</small></p>
+        <p><small>Don't forget to like, comment, and subscribe. Donate to my Patreon so I can keep making content for ya'll. Follow my Instagram, Twitter, Facebook, MySpace, OnlyFans, download my Xanga blog, hit me on Friendster, etc.</small></p>
       </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
